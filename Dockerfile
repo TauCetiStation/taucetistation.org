@@ -14,6 +14,10 @@ RUN git clone https://github.com/TauCetiStation/taucetistation.org.git .
 #COPY . /var/www/
 
 RUN composer install
+
+#https://github.com/npm/npm/issues/20861
+RUN npm config set unsafe-perm true
+
 RUN npm install
 RUN npm install -g gulp
 RUN gulp --prod
