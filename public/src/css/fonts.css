@@ -1,0 +1,6 @@
+@font-face {
+	font-family: "VCR OSD";
+	src:
+		url("/font/VCR_Font_Cyrillic.ttf") format("ttf"),
+		url("/font/VCR_Font_Cyrillic.woff") format("woff");
+}

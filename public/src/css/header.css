@@ -1,0 +1,54 @@
+.header {
+	padding-bottom: 5px;
+	border-bottom: 2px solid var(--color-red);
+	font-family: "VCR OSD", monospace;
+	min-height: 20px;
+	box-sizing: content-box;
+	overflow: hidden; /* cf */
+	line-height: 20px;
+	position: relative;
+	text-align: right;
+
+	@media (min-width: 860px) {
+		text-align: center;
+	}
+
+	&__clock {
+		/* todo: centering problem because font */
+		color: var(--color-yellow);
+		display: inline-block;
+	}
+
+	&__title,
+	&__subtitle {
+		display: inline-block;
+		text-transform: uppercase;
+		line-height: 20px;
+		padding: 0 1px;
+
+		@media (min-width: 860px) {
+			position: absolute;
+			top: 0;
+		}
+	}
+
+	&__title {
+		background: var(--color-red);
+		color: var(--color-dark);
+		left: 0;
+
+		@media (max-width: 859px) {
+			display: none;
+		}
+	}
+
+	&__subtitle {
+		background: var(--color-yellow);
+		color: var(--color-dark);
+		right: 0;
+
+		@media (max-width: 859px) {
+			float: left;
+		}
+	}
+}

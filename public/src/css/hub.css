@@ -1,0 +1,103 @@
+.hub {
+	border-bottom: 2px solid var(--color-red);
+
+	&__server {
+		display: block;
+		margin: 2px 0;
+		padding: 0 2px;
+		font-family: "VCR OSD", monospace;
+		text-transform: uppercase;
+		font-size: 13px;
+		background: var(--color-yellow);
+		color: var(--color-dark);
+		position: relative;
+
+		> ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			@media (max-width: 859px) {
+				padding-top: 8px; /* space for "side server" tag */
+				padding-bottom: 8px;
+			}
+
+			> li {
+				padding: 0;
+				margin: 2px 0;
+
+				@media (max-width: 859px) {
+					width: 25%;
+					min-width: 200px;
+				}
+
+				@media (min-width: 860px) {
+					width: 50%;
+
+					&:nth-child(odd) {
+						border-right: 2px solid #373735;
+						padding-right: 5px;
+					}
+
+					&:nth-child(even) {
+						border-left: 2px solid #373735;
+						padding-left: 5px;
+					}
+				}
+			}
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-bottom: 14px solid var(--color-dark);
+			border-left: 14px solid transparent;
+			bottom: 2px;
+			right: 2px;
+		}
+
+		&_restart {
+			background: var(--color-orange);
+		}
+
+		&_error {
+			background: var(--color-red);
+		}
+
+		&_side {
+			&::before {
+				content: 'Сторонний сервер';/* todo: translation problem */
+				position: absolute;
+				top: 2px;
+				right: 2px;
+				font-size: 7px;
+			}
+		}
+	}
+
+	&_expander {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		height: 20px;
+		background: var(--color-yellow);
+		color: var(--color-dark);
+		cursor: pointer;
+		margin: 2px 0;
+
+		& > img {
+			width: 20px;
+			height: 20px;
+		}
+		
+		&__expanded > img {
+			transform: rotate(180deg);
+		}
+	}
+}

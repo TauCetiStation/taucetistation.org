@@ -1,0 +1,153 @@
+.menu {
+	@media (max-width: 859px) {
+		display: block;
+		position: fixed;
+		background-color: var(--color-yellow);
+		background-repeat: no-repeat;
+		background-position: center;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 100vh;
+		transform: translateX(-100%);
+		width: calc(100% - 40px);
+		z-index: 50;
+
+		&_open {
+			transform: translateX(0);
+		}
+	}
+
+	&__switcher {
+		@media (max-width: 859px) {
+			position: absolute;
+			width: 40px;
+			background-color: var(--color-yellow);
+			top: 0;
+			bottom: 0;
+			right: -40px;
+			height: 100vh;
+			cursor: pointer;
+			border-left: 1px solid var(--color-dark);
+			
+			/* burger image centring */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		@media (min-width: 860px) {
+			display: none;
+		}
+	}
+
+	/* todo: menu cont */
+	&__block {
+		margin: 0 auto;
+		padding: 0;
+		list-style: none;
+		
+		@media (min-width: 860px) {
+			width: 125px;
+
+			&_smallButtons {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin-top: 4px;
+			}
+		}
+	}
+
+	&__button {
+		font-size: 1rem;
+		text-align: center;
+		user-select: none;
+
+		@media (max-width: 859px) {
+			font-size: 1.75rem;
+			line-height: 2.5rem;
+			font-family: 'Roboto', sans-serif;
+			border-bottom: 1px solid var(--color-dark);
+
+			&:hover {
+				background: var(--color-orange);
+			}
+
+			& > a {
+				color: #000;
+				display: block;
+			}
+		}
+
+		@media (min-width: 860px) {
+			position: relative;
+			display: block;
+			width: 125px;
+			padding: 0;
+			border: 0;
+			border-radius: 8px;
+			margin: 4px auto 0;
+			background-color: #4e6066;
+			background-image: url('/image/button.png');
+			background-size: 50% 50%;
+			background-blend-mode: soft-light;
+			box-sizing: border-box;
+			box-shadow: inset 0 0 15px 0 #00000080, inset 0 0 6px 1px #000, inset 0 0 0 1px #000, 0 0 1px 0 #000, -1px 1px 2px -1px #00000080;
+
+			& > a {
+				display: block;
+				padding: 5px;
+				font-family: 'Roboto Condensed', sans-serif;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: #55666b;
+				text-shadow: 1px 0 0 #dbdbdb80, 0 0 1px #000, 0 0 1px #000, 0 0 2px #000, -1px 1px 1px #000;
+				letter-spacing: 1px;
+			}
+
+			&:hover {
+				box-shadow: inset 0 0 17px 0 #00000080, inset 0 0 8px 1px #000, inset 0 0 1px 1px #000, 0 0 1px 0 #000, -1px 1px 2px -1px #00000080;
+
+				& > a {
+					text-shadow: 1px 0 0 #b6b3b380, 0 0 1px #000, 0 0 1px #000, 0 0 2px #000, -1px 1px 1px #000;
+				}
+			}
+			
+			&:active {
+				box-shadow: inset 0 0 19px 0 #00000080, inset 0 0 10px 2px black, inset 0 0 2px 1px #000, 0 0 1px 0 #000, -1px 1px 2px -1px #00000080;
+				
+				& > a {
+					text-shadow: 1px 0 0 #b6b3b380, 0 0 1px #000, 0 0 1px #000, 0 0 2px #000, -1px 1px 1px #000;
+				}
+			}
+		}
+
+		&_small {
+			@media (max-width: 859px) {
+				> a::after {
+					content: attr(title);
+				}
+			}
+
+			@media (min-width: 860px) {
+				width: 39px;
+				min-width: auto;
+				margin: 0;
+
+				> a {
+					padding: 6px 0;
+				}
+			}
+		}
+	}
+
+	&__buttonIcon {
+		width: 16px;
+		height: 18px;
+
+		@media (max-width: 859px) {
+			display: none;
+		}
+	}
+}

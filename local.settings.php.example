@@ -1,0 +1,25 @@
+<?php
+return [
+    'settings' => [
+        'displayErrorDetails' => false, // set to false in production
+
+        'tauceti' => [
+            'storage' => __DIR__ . '/../storage/',
+            'cache' => __DIR__ . '/../cache/',
+            'patreon' => [
+                'patreon_client_id' => 'id',
+                'patreon_client_secret' => 'secret',
+                'access_token' => 'token',
+                'refresh_token' => 'token',
+                'associated_ckeys' => [
+                    'name' => 'ckey'
+                ],
+            ]
+        ],
+
+        'messages' => [
+            "message1",
+            "message2",
+        ],
+    ],
+];

@@ -1,0 +1,43 @@
+.content {
+	margin-top: 2px;
+	border-top: 2px solid var(--color-yellow);
+	padding: 8px 4px;
+	color: #fff;
+	font-size: 1rem;
+	overflow-y: hidden;
+
+	@media (min-width: 860px) {
+		overflow-y: scroll;
+	}
+
+	&__image {
+		display: inline-block;
+		max-width: 120px;
+		max-height: 120px;
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		transition: border-color 1s;
+		margin: 2px;
+
+		&:hover {
+			border-color: var(--color-yellow);
+		}
+
+		& > img {
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	h1 {
+		font-size: 1.4rem;
+	}
+
+	h2 {
+		font-size: 1.2rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+}

@@ -1,0 +1,86 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 16px;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-image: url('/image/space.png');
+	background-position: top center;
+	background-attachment: fixed;
+
+	@media (min-width: 860px) {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+}
+
+a {
+	color: var(--color-yellow);
+	text-decoration: none;
+}
+
+.spacer {
+	@media (min-width: 860px) {
+		flex-shrink: 2;
+		height: 8%;
+	}
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 860px;
+	background-color: var(--color-dark);
+
+	@media (min-width: 860px) {
+		display: flex;
+		width: 860px;
+		height: 620px;
+		flex-shrink: 0;
+		background-color: transparent;
+		background-image: url('/image/pda.png');
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+
+	> .container {
+		@media (max-width: 859px) {
+			padding-left: 48px;
+			padding-right: 8px;
+		}
+
+		@media (min-width: 860px) {
+			display: flex;
+			flex-direction: column;
+			width: 550px;
+			height: 510px;
+			position: absolute;
+			left: 67px;
+			top: 65px;
+		}
+	}
+
+	> .menu {
+		@media (min-width: 860px) {
+			position: absolute;
+			width: 155px;
+			left: 670px;
+			top: 152px;
+			text-align: center;
+		}
+	}
+}

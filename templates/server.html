@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<p>name: {{ name }}</p>
+
+<!-- <p>server: {{ server }}</p> -->
+
+<p> {{ data }}</p>
+<p> {{ serverData }}</p>
+<ul>
+{% for str in data %}
+   <li>{{ str }}</li>
+{% endfor %}
+</ul>
+
+Work in progress
+
+{% endblock %}

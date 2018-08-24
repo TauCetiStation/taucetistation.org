@@ -1,0 +1,21 @@
+.messages {
+	margin: 0;
+	list-style-type: none;
+	padding: 0 2px;
+	margin-top: 2px;
+	background: var(--color-red);
+	color: var(--color-dark);
+	font-family: "VCR OSD", monospace;
+	font-size: 12px;
+
+	&__warning {
+		color: var(--color-yellow);
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	> li {
+		margin: 2px 0;
+		padding: 0;
+	}
+}

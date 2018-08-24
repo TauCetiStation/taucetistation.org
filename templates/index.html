@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block panels %}
+	{% include 'hub.html' %}
+	{% include 'messages.html' %}
+{% endblock %}
+
+{% block content %}
+<h1>Добро пожаловать в Space Station 13!</h1>
+<p>Станьте работником на научной космической станции в далёком космосе и попытайтесь пережить свою смену.</p>
+
+<ul>
+	<li><a href="#start">С чего начать</a></li>
+	<li><a href="#ss13">О SS13</a></li>
+	<li><a href="#tauceti">О Tau Ceti</a></li>
+</ul>
+
+<h2 id="start">С чего начать</h2>
+<p>Скачайте и установите <a href="http://www.byond.com/download/">byond</a>, создайте аккаунт, подключайтесь к серверу кликнув баннер вверху. Ознакомьтесь с <a href="#">Гайдом для начинающих</a> на нашей вики.</p>
+<p>Если возникли проблемы - посмотрите список возможых решений на форуме, обратитесь в наш канал в дискорде <a href="">#pls_halp_me</a></p>
+
+{% include 'image.html' with {'img': '/image/screen/screen2.png', title: 'Инженеры настраивают генератор'} %}
+{% include 'image.html' with {'img': '/image/screen/screen1.jpg', title: 'рандом'} %}
+
+<h2 id="ss13">Space Station 13</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eligendi deleniti autem ducimus dicta placeat quidem quos nulla excepturi, blanditiis laboriosam maxime, ipsum impedit ex natus suscipit eos tempora at.</p>
+
+<p>Sapiente ipsam ipsum ullam pariatur, a, rem in iure quam dolorem dicta voluptatibus, ratione incidunt magnam tempore? Delectus expedita, ipsum necessitatibus velit ipsa! Consequuntur minus illo sed molestiae omnis pariatur!</p>
+
+<h2 id="tauceti">Tau Ceti</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eligendi deleniti autem ducimus dicta placeat quidem quos nulla excepturi, blanditiis laboriosam maxime, ipsum impedit ex natus suscipit eos tempora at.</p>
+<p>Sapiente ipsam ipsum ullam pariatur, a, rem in iure quam dolorem dicta voluptatibus, ratione incidunt magnam tempore? Delectus expedita, ipsum necessitatibus velit ipsa! Consequuntur minus illo sed molestiae omnis pariatur!</p>
+<p>Reiciendis, ratione cum sapiente natus quae accusamus aliquam earum optio suscipit, minima qui excepturi quibusdam ex eveniet doloremque. Et fugiat labore, similique repellendus ex. Perferendis ab aliquam neque, officiis maxime.</p>
+<p>At, laudantium! Rem possimus odio eligendi cumque ipsam consectetur expedita rerum illum ut repellat? Sapiente eveniet pariatur nemo, nostrum error unde. Provident rerum accusantium labore repudiandae nihil facere cupiditate fugiat.</p>
+
+<h3 id="tauceti_links">Ссылки</h3>
+<ul>
+	<li>VK one</li>
+	<li>VK two</li>
+	<li>Youtube</li>
+</ul>
+{% endblock %}

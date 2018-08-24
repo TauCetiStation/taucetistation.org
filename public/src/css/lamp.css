@@ -1,0 +1,22 @@
+.lamp {
+	@media (max-width: 859px) {
+		display: none;
+	}
+
+	display: block;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	left: 645px;
+	top: 30px;
+	background-image: url('/image/lamp.png');
+	background-position: 0 0;
+	animation: lampBlink 20s linear infinite;
+}
+
+@keyframes lampBlink {
+	0% { background-position: 0 200%; }
+	90.99% { background-position: 0 200%; }
+	91% { background-position: 0 100%; }
+	100% { background-position: 0 100%; }
+}

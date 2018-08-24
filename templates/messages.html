@@ -1,0 +1,7 @@
+{% if messages %}
+	<ul class="messages">
+	{% for message in messages %}
+		<li><span class="messages__warning">⚠</span> {{ message|striptags('<a><br><span>')|raw }}</li>
+	{% endfor %}
+	</ul>
+{% endif %}

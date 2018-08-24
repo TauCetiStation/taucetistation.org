@@ -1,0 +1,12 @@
+{
+	"extends": "stylelint-config-standard",
+	"plugins": [
+		"stylelint-csstree-validator"
+	],
+	"rules": {
+		"indentation": "tab",
+		"font-weight-notation": "numeric",
+		"no-eol-whitespace": [true, {"ignore": ["empty-lines"]} ],
+		"csstree/validator": true
+	}
+}

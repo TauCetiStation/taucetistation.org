@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% block head %}
+			<link rel="stylesheet" href="/build/styles.css" />
+			<title>{% block title %}Tau Ceti Station - сообщество SS13{% endblock %}</title>
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+
+			<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet"> 
+		{% endblock %}
+	</head>
+	<body>
+		<!-- blockName__elemName_modName_modVal -->
+		<div class="spacer"></div>
+		<div class="wrapper">
+			<span class="lamp"></span>
+			<section class="container">
+				<header class="header">
+					<span class="header__title">Space Station 13</span>
+					<div id="header__clock"></div>
+					<span class="header__subtitle">Tau Ceti Station</span>
+				</header>
+				{% block panels %}
+				{% endblock %}
+				<main class="content">
+					{% block content %}
+					{% endblock %}
+				</main>
+				<footer class="footer">
+					<a href="mailto:contact@taucetistation.org">contact@taucetistation.org</a>
+				</footer>
+			</section>
+			{% include 'menu.html' %}
+		</div>
+	</body>
+	<script type="text/javascript" src="/build/scripts.js"></script>
+</html>
+<!-- Made with love 💚 -->

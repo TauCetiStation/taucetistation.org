@@ -1,0 +1,9 @@
+#baguetteBox-overlay .full-image figure {
+	display: inline-block;
+	height: auto;
+	position: relative;
+}
+
+#baguetteBox-overlay .full-image figcaption {
+	left: 0;
+}

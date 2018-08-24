@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<p>Содержание проектов в интернете не обходится бесплатно, и мы не исключение. Вы можете помочь финансово нашему проекту через сервис Patreon, и даже получить за это небольшие игровые бонусы!</p>
+
+<p style="text-align: center;">
+	<a class="patreon__button" href="https://patreon.com/{{pledge_url}}"><img src="/image/become_a_patron.png" alt="become a patron"></a>
+</p>
+
+{% if goal %}
+	<p style="text-align: center; font-weight: bold;">
+		Текущая цель:
+	</p>
+
+	<div class="patreon__goal">
+		<div class="patreon__goalText">
+			{{goal.description|striptags}}<br>
+			<b>{{pledge_sum  / 100}}/{{goal.amount_cents / 100}}$</b>
+		</div>
+		<span class="patreon__goalPercentage" style="width: {{goal.completed_percentage}}%"></span>
+	</div>
+{% endif %}
+
+<p style="text-align: center; font-weight: bold;">В этом месяце мы благодарны следующим космонавтам:</p>
+
+{% if patrons %}
+<ul class="patreon__list">
+	{% for patron in patrons %}
+		{% if patron.is_active %}
+			<li class="patreon__listItem"><img src="{{patron.picture}}" alt="avatar"> {{patron.name}}</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+{% endif %}
+
+<p style="font-style: italic;">Если вы не нашли себя в списке, или если вы имеете любые другие проблемы с Патреоном, обратитесь в дискорд сообщества.</p>
+
+{% endblock %}

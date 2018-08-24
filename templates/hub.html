@@ -1,0 +1,33 @@
+{% if servers %}
+	<div class="hub" id="hub">
+		 <hub__server
+		 	v-for="server in servers"
+			:key="server.id" 
+			v-if="server.hubShowAlways || server.hubShowDefault || expanded"
+			:server="server"
+			>
+		</hub__server>
+		<span v-if="hasHiddenServers" class="hub_expander" :class="{'hub_expander__expanded': expanded}" v-on:click="toggleExpand">
+			<img src='/image/arrow.svg'>
+		</span>
+	</div>
+	<script>
+		//generated with twig js array of servers
+		//thats weird, but faster than query to api
+		var hubServers = [
+			{% for shortname, server in servers %}
+				{% if server.hub %}
+					{
+						id: {{loop.index}},
+						servername: "{{server.name}}",
+						shortname: "{{shortname}}",
+						hubShowAlways: {{server.hubShowAlways ? 1 : 0}},
+						hubShowDefault: {{server.hubShowDefault ? 1 : 0}},
+						hubSidetag: {{server.hubSidetag ? 1 : 0}},
+						address: "byond://{{server.address}}:{{server.port}}",
+					},
+				{% endif %}
+			{% endfor %}
+		];
+	</script>
+{% endif %}
