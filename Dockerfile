@@ -1,4 +1,4 @@
-FROM php:7.2-fpm-alpine
+FROM php:fpm-alpine
 
 RUN docker-php-ext-install sockets
 RUN apk --update add \
@@ -8,16 +8,17 @@ RUN apk --update add \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 
-WORKDIR /var/www
+#https://github.com/npm/npm/issues/20861
+RUN npm config set unsafe-perm true
+RUN npm install -g gulp
+
+WORKDIR /var/www/taucetistation-org/
 RUN rm -rf *
+RUN chown www-data:www-data .
+USER www-data
 RUN git clone https://github.com/TauCetiStation/taucetistation.org.git .
-#COPY . /var/www/
 
 RUN composer install
 
-#https://github.com/npm/npm/issues/20861
-RUN npm config set unsafe-perm true
-
 RUN npm install
-RUN npm install -g gulp
 RUN gulp --prod
