@@ -6,4 +6,5 @@
 
 #baguetteBox-overlay .full-image figcaption {
 	left: 0;
+	background: rgba(0,0,0,.8);
 }
