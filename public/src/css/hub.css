@@ -8,7 +8,7 @@
 		font-family: "VCR OSD", monospace;
 		text-transform: uppercase;
 		font-size: 13px;
-		background: var(--color-yellow);
+		background-color: var(--color-yellow);
 		color: var(--color-dark);
 		position: relative;
 
@@ -63,11 +63,15 @@
 		}
 
 		&_restart {
-			background: var(--color-orange);
+			background-color: var(--color-orange);
 		}
 
 		&_error {
-			background: var(--color-red);
+			background-color: var(--color-red);
+		}
+
+		&_roundstart {
+			background-color: var(--color-green);
 		}
 
 		&_side {

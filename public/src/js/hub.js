@@ -79,7 +79,7 @@ if(typeof(hubServers) !== 'undefined' && document.getElementById("hub")) {
 			}
 		},
 		template://todo: click.alt update?
-			`<a :href="server.address" class="hub__server" :class="{'hub__server_error': error, 'hub__server_restart': restart, 'hub__server_side': server.hubSidetag}">
+			`<a :href="server.address" class="hub__server" :class="{'hub__server_error': error, 'hub__server_restart': restart, 'hub__server_roundstart': roundstart, 'hub__server_side': server.hubSidetag}">
 				<ul>
 					<li>{{server.servername}}</li>
 
