@@ -24,7 +24,7 @@ return [
             ],
             */
             'tauceti' => [
-                'name' => 'Tau Ceti Station',
+                'name' => 'Tau Ceti Classic',
                 'desciption' => 'Основной сервер сообщества',
                 'address' => 'game.tauceti.ru',
                 'port' => '2506',
@@ -45,8 +45,6 @@ return [
                 'desciption' => 'alien',
                 'address' => '5.9.12.156',
                 'port' => '2495',
-                'hub' => true,
-                'hubSidetag' => true,
             ],
             'exidium' => [
                 'name' => 'Exidium',
@@ -60,14 +58,6 @@ return [
                 'name' => 'Fallout',
                 'desciption' => 'Пустоши',
                 'address' => '5.9.12.156',
-                'port' => '2506',
-                'hub' => true,
-                'hubSidetag' => true,
-            ],
-            'test' => [
-                'name' => 'Test',
-                'desciption' => 'test',
-                'address' => 'localhost',
                 'port' => '2506',
                 'hub' => true,
                 'hubSidetag' => true,
