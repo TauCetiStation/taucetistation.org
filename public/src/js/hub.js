@@ -61,7 +61,7 @@ if(typeof(hubServers) !== 'undefined' && document.getElementById("hub")) {
 						console.log(error);
 						this.error = true;
 					})
-					.finally(() => (this.loading = false));
+					.then(() => (this.loading = false));
 			},
 			stateClass: function() {
 				return "error";
