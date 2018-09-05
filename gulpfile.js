@@ -76,8 +76,11 @@ function bsBundle(watch) {
 
 	function rebundle() {
 		bundler.bundle()
-			/*.on('error', err => notify.onError("Error:\n" + stripAnsi(err.message))(err))*/
-			.pipe(gulpif(!argv.prod, plumber({errorHandler: err => notify.onError("Error:\n" + stripAnsi(err.message))(err)})))
+			.on('error', err => {
+				if(argv.prod)
+					return console.log(err.message);
+				return notify.onError("Error:\n" + stripAnsi(err.message))(err);
+			})
 			.pipe(source('scripts.js'))
 			.pipe(buffer())
 			.pipe(sourcemaps.init({loadMaps: true}))
