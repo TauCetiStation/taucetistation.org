@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<p>Сейчас вам будет предложено запустить Byond для подключения к серверу <b>{{name}}</b>.</p>
+<p>Если этого не происходит, нажмите <a href="byond://{{address}}:{{port}}">сюда</a>.</p>
+<p>---</p>
+<p>Вы можете открыть адрес напрямую через Byond -> Open Location, и скопировать адрес для подключения:</p>
+<p><mark>{{address}}:{{port}}</mark></p>
+
+<script type="text/javascript">
+	setTimeout('location.replace("byond://{{address}}:{{port}}")',1000);
+</script>
+{% endblock %}
