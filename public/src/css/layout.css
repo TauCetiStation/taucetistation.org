@@ -61,6 +61,7 @@ a {
 		@media (max-width: 859px) {
 			padding-left: 48px;
 			padding-right: 8px;
+			min-height: 100vh;
 		}
 
 		@media (min-width: 860px) {
