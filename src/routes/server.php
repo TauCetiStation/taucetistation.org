@@ -25,7 +25,7 @@ $app->get('/server/{name}[/{format:json}]', function ($request, $response, $args
 	}
 });
 
-$app->get('/server/{name}/link', function ($request, $response, $args) {
+$app->get('/server/{name}/join', function ($request, $response, $args) {
 	$settings = $this->get('settings')['servers'];
 
 	//check if server in configs
