@@ -36,9 +36,6 @@ return [
                 'desciption' => 'gamma',
                 'address' => '5.9.12.156',
                 'port' => '2507',
-                'hub' => true,
-                'hubShowDefault' => true,
-                'hubSidetag' => true,
             ],
             'alien' => [
                 'name' => 'Colonial Marines',
@@ -52,6 +49,7 @@ return [
                 'address' => 'game.excidium.xyz',
                 'port' => '2499',
                 'hub' => true,
+                'hubShowDefault' => true,
                 'hubSidetag' => true,
             ],
             'fallout' => [
@@ -60,6 +58,7 @@ return [
                 'address' => '5.9.12.156',
                 'port' => '2506',
                 'hub' => true,
+                'hubShowDefault' => true,
                 'hubSidetag' => true,
             ],
             'tg' => [
