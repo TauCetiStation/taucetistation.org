@@ -60,20 +60,14 @@ class Byond {
 		//can't get new data, let's check old
 		if(file_exists($cacheFile)) {
 			$objData = unserialize(file_get_contents($cacheFile));
-			//restarting?
-			if(array_key_exists('gamestate', $objData) && $objData['gamestate'] === 4) {
-				$objData['cached'] = 1;
-				return $objData;
-			}
+			$objData['cached'] = 1;
+		} else {
+			//can't get data...
+			$objData['error'] = 1;
 		}
 
-		//can't get data...
-		$objData['error'] = 1;
-
-		//if cache file not exist, create new one for timeout
-		if(!file_exists($cacheFile)) {//todo: third check for file ???
-			file_put_contents($cacheFile, serialize($objData));
-		}
+		//create/update cache file for timeout
+		file_put_contents($cacheFile, serialize($objData));
 
 		return $objData;
 	}
