@@ -61,8 +61,9 @@ class Byond {
 		if(file_exists($cacheFile)) {
 			$objData = unserialize(file_get_contents($cacheFile));
 			$objData['cached'] = 1;
-		} else {
-			//can't get data...
+		}
+
+		if(!(array_key_exists('gamestate', $objData) && $objData['gamestate'] === 4)) {
 			$objData['error'] = 1;
 		}
 
