@@ -27,7 +27,7 @@
 <ul class="patreon__list">
 	{% for patron in patrons %}
 		{% if patron.is_active %}
-			<li class="patreon__listItem"><img src="{{patron.picture}}" alt="avatar"> {{patron.name}}</li>
+			<li class="patreon__listItem u-clearfix"><img src="{{patron.picture}}" alt="avatar"> {{patron.name}}</li>
 		{% endif %}
 	{% endfor %}
 </ul>
