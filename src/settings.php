@@ -43,15 +43,6 @@ return [
                 'address' => '5.9.12.156',
                 'port' => '2495',
             ],
-            'exidium' => [
-                'name' => 'Exidium',
-                'desciption' => 'Exidium',
-                'address' => 'game.excidium.xyz',
-                'port' => '2499',
-                'hub' => true,
-                'hubShowDefault' => true,
-                'hubSidetag' => true,
-            ],
             'fallout' => [
                 'name' => 'Fallout',
                 'desciption' => 'Пустоши',
