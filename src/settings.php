@@ -26,7 +26,7 @@ return [
             'tauceti' => [
                 'name' => 'Tau Ceti Classic',
                 'desciption' => 'Основной сервер сообщества',
-                'address' => 'game.tauceti.ru',
+                'address' => 'game.taucetistation.org',
                 'port' => '2506',
                 'hub' => true,
                 'hubShowAlways' => true,
