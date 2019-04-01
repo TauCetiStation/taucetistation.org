@@ -79,7 +79,7 @@ function getPatreonObject($app) {
 					'per_payment' => number_format($pledge->amount_cents / 100, 2),
 					'total_amount' => number_format($pledge->total_historical_amount_cents / 100, 2),
 					'is_active' => $pledge->isActive(),/*проверку на деклинед */
-					'reward_price' => $pledge->reward->getPrice(),
+					'reward_price' => $pledge->hasReward() ? $pledge->reward->getPrice() : null,
 					'reward' => $pledge->hasReward() ? $pledge->reward->title : null,
 				]];
 			})->toArray();
