@@ -39,6 +39,14 @@ return [
                 'hub' => true,
                 'hubShowAlways' => true,
             ],
+            'tauceti3' => [
+                'name' => 'Tau Ceti Classic III',
+                'desciption' => 'Основной сервер сообщества',
+                'address' => 'game.taucetistation.org',
+                'port' => '2508',
+                'hub' => true,
+                'hubShowAlways' => true,
+            ],
             'gamma' => [
                 'name' => 'Gamma Station',
                 'desciption' => 'gamma',
