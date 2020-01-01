@@ -21,6 +21,7 @@ if(typeof(hubServers) !== 'undefined' && document.getElementById("hub")) {
 				roundduration: null,
 				stationtime: null,
 				players: null,
+				popcap: null,
 				mode: null,
 				error: false,
 				gamestate: GS_PLAYING,
@@ -48,6 +49,7 @@ if(typeof(hubServers) !== 'undefined' && document.getElementById("hub")) {
 							this.roundduration = moment.duration(response.data.round_duration, "seconds").format("*HH:mm");
 						}
 
+						this.popcap = response.data.popcap;
 						this.mode = response.data.mode;
 
 						if(typeof response.data.gamestate !== 'undefined') {
@@ -88,6 +90,7 @@ if(typeof(hubServers) !== 'undefined' && document.getElementById("hub")) {
 					<li v-else>Station time: {{stationtime}}</li>
 
 					<li v-if='loading || error'>Crew: --</li>
+					<li v-else-if='popcap'>Crew: {{players}}/{{popcap}}</li>
 					<li v-else>Crew: {{players}}</li>
 
 					<li v-if='loading'>Loading...</li>
@@ -95,6 +98,7 @@ if(typeof(hubServers) !== 'undefined' && document.getElementById("hub")) {
 					<li v-else-if='restart'>Restart</li>
 					<li v-else-if='roundstart'>Round Start</li>
 					<li v-else>{{mode}}</li>
+
 				</ul>
 			</a>`,
 	});
