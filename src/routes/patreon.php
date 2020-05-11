@@ -74,7 +74,7 @@ function getPatreonObject($app) {
 			//preparing data
 			$patrons = $campaign->pledges->mapWithKeys(function ($pledge) {
 				return [$pledge->patron->id => [
-					'name' => $pledge->patron->full_name,
+					'name' => trim($pledge->patron->full_name),
 					'picture' => $pledge->patron->image_url,
 					'per_payment' => number_format($pledge->amount_cents / 100, 2),
 					'total_amount' => number_format($pledge->total_historical_amount_cents / 100, 2),
