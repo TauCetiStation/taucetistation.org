@@ -47,17 +47,13 @@ return [
                 'hub' => true,
                 'hubShowAlways' => true,
             ],
-            'gamma' => [
-                'name' => 'Gamma Station',
-                'desciption' => 'gamma',
-                'address' => '5.9.12.156',
-                'port' => '2507',
-            ],
-            'alien' => [
-                'name' => 'Colonial Marines',
-                'desciption' => 'alien',
-                'address' => '5.9.12.156',
-                'port' => '2495',
+            'sandbox' => [
+                'name' => 'Tau Ceti Sandbox',
+                'desciption' => 'Не игровой сервер-песочница',
+                'address' => 'game.taucetistation.org',
+                'port' => '2510',
+                'hub' => true,
+                'hubShowAlways' => false,
             ],
             'fallout' => [
                 'name' => 'Fallout',
