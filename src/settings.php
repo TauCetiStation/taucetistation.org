@@ -55,15 +55,6 @@ return [
                 'hub' => true,
                 'hubShowAlways' => false,
             ],
-            'fallout' => [
-                'name' => 'Fallout',
-                'desciption' => 'Пустоши',
-                'address' => '5.9.12.156',
-                'port' => '2506',
-                'hub' => true,
-                'hubShowDefault' => true,
-                'hubSidetag' => true,
-            ],
             'tg' => [
                 'name' => '/tg/station Bagil',
                 'desciption' => 'test',
