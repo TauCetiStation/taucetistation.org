@@ -20,7 +20,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-stylus": "^2.7.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "moment-duration-format": "^2.2.2",
     "moment-timezone": "^0.5.21",
     "postcss-css-variables": "^0.9.0",
