@@ -44,8 +44,8 @@ return [
                 'desciption' => 'Основной сервер сообщества',
                 'address' => 'game.taucetistation.org',
                 'port' => '2508',
-                'hub' => true,
-                'hubShowAlways' => true,
+                'hub' => false,
+                'hubShowAlways' => false,
             ],
             'sandbox' => [
                 'name' => 'Tau Ceti Sandbox',
@@ -53,7 +53,7 @@ return [
                 'address' => 'game.taucetistation.org',
                 'port' => '2510',
                 'hub' => true,
-                'hubShowAlways' => false,
+                'hubShowAlways' => true,
             ],
             'tg' => [
                 'name' => '/tg/station Bagil',
