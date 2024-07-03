@@ -2,8 +2,11 @@
     "require": {
         "slim/slim": "^3.0",
         "slim/twig-view": "^2.4",
-        "squid/patreon": "^1.2",
-        "php-http/guzzle6-adapter": "^1.1",
-        "zendframework/zend-stdlib": "^3.2"
+        "laminas/laminas-stdlib": "^3.19"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }

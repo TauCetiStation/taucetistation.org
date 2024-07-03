@@ -1,8 +1,11 @@
 <?php
 
-use Slim\Http\Request;
-use Slim\Http\Response;
-use Squid\Patreon\Patreon;
+$app->get('/patreon', function ($request, $response) {
+	$data = $this->get('settings')['support'];
+	return $this->view->render($response, 'support.html', $data);
+});
+
+/*use Squid\Patreon\Patreon;
 use Squid\Patreon\OAuth;
 
 $app->get('/patreon[/{format:json}]', function ($request, $response, $args) {
@@ -78,7 +81,7 @@ function getPatreonObject($app) {
 					'picture' => $pledge->patron->image_url,
 					'per_payment' => number_format($pledge->amount_cents / 100, 2),
 					'total_amount' => number_format($pledge->total_historical_amount_cents / 100, 2),
-					'is_active' => $pledge->isActive(),/*проверку на деклинед */
+					'is_active' => $pledge->isActive(),
 					'reward_price' => $pledge->hasReward() ? $pledge->reward->getPrice() : null,
 					'reward' => $pledge->hasReward() ? $pledge->reward->title : null,
 				]];
@@ -127,4 +130,4 @@ function getPatreonObject($app) {
 	};
 
 	return $data;
-}
+}*/

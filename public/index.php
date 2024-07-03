@@ -17,7 +17,7 @@ session_start();
 // Instantiate the app
 $settings = require __DIR__ . '/../src/settings.php';
 $localSettings = require __DIR__ . '/../src/local.settings.php';
-$settings = Zend\Stdlib\ArrayUtils::merge($settings, $localSettings);
+$settings = Laminas\Stdlib\ArrayUtils::merge($settings, $localSettings);
 $app = new \Slim\App($settings);
 
 // Set up dependencies
@@ -31,6 +31,7 @@ require __DIR__ . '/../src/routes/home.php';
 require __DIR__ . '/../src/routes/patreon.php';
 require __DIR__ . '/../src/routes/server.php';
 require __DIR__ . '/../src/routes/servers.php';
+require __DIR__ . '/../src/routes/map.php';
 
 // Run app
 $app->run();

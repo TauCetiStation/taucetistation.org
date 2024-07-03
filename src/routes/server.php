@@ -1,8 +1,5 @@
 <?php
 
-use Slim\Http\Request;
-use Slim\Http\Response;
-
 $app->get('/server/{name}[/{format:json}]', function ($request, $response, $args) {
 	$settings = $this->get('settings')['servers'];
 

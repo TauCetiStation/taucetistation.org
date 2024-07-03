@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<p>Содержание проектов в интернете не обходится бесплатно, и мы не исключение.</p>
+<p>Вы можете помочь финансово нашему проекту через сервисы Patreon или Boosty, и даже получить за это небольшие игровые бонусы!</p>
+
+	<div class="patreon__goal">
+		<div class="patreon__goalText">
+			Покрытие расходов за прошлый месяц<br>
+			<b>{{got}}/{{spend}}$</b>
+		</div>
+		<span class="patreon__goalPercentage" style="width: {{got*100/spend}}%"></span>
+	</div>
+
+<p style="margin-top: 50px;">
+	<a class="support__button support__button_patreon" href="https://patreon.com/tauceti"><img src="/image/support_patreon.svg" alt="patreon"></a>
+	<a class="support__button support__button_boosty" href="https://boosty.to/tauceti"><img src="/image/support_boosty.svg" alt="boosty"></a>
+</p>
+
+{% endblock %}

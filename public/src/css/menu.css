@@ -9,8 +9,8 @@
 		left: 0;
 		bottom: 0;
 		height: 100vh;
-		transform: translateX(-100%);
-		width: calc(100% - 40px);
+		transform: translateX(calc(-100vw + 40px));
+		width: calc(100vw - 40px);
 		z-index: 50;
 
 		&_open {

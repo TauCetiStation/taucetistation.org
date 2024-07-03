@@ -1,0 +1,51 @@
+.support {
+	&__goal {
+		display: block;
+		width: 500px;
+		max-width: calc(100% - 20px);
+		margin: 0 auto;
+		position: relative;
+		padding: 5px 10px;
+		background: #fff;
+		font-size: 0.8rem;
+	}
+
+	&__goalText {
+		color: #000;
+		position: relative;
+		z-index: 10;
+		text-align: center;
+	}
+
+	&__goalPercentage {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background: var(--color-green);
+		animation-name: progressBar;
+		animation-duration: 2s;
+	}
+
+	&__button {
+		display: block;
+		width: 175px;
+		margin: 8px auto;
+
+		&_patreon {
+			background: #ffffff;
+		}
+		&_boosty {
+			background: #F15F2C;
+		}
+
+		& > img {
+			display: block;
+		}
+	}
+}
+
+@keyframes progressBar {
+	0% { width: 0; }
+}

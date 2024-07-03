@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import axios from 'axios';
 import moment from 'moment';
 import 'moment-duration-format';
 
@@ -38,26 +37,32 @@ if(typeof(hubServers) !== 'undefined' && document.getElementById("hub")) {
 		},
 		methods: {
 			update: function() {
-				axios.get('/server/' + this.server.shortname + '/json')
+				fetch('/server/' + this.server.shortname + '/json')
 					.then(response => {
-						this.stationtime = response.data.stationtime;
-						this.players = response.data.players;
+						if (!response.ok) {
+							throw new Error('Fetch failed: ' + response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => {
+						this.stationtime = data.stationtime;
+						this.players = data.players;
 
-						if(typeof response.data.roundduration !== 'undefined') {//roundduration - formatted Bay style
-							this.roundduration = response.data.roundduration;
-						} else if (typeof response.data.round_duration !== 'undefined') {//round_duration - not formatted /tg/ stile
-							this.roundduration = moment.duration(response.data.round_duration, "seconds").format("*HH:mm");
+						if(typeof data.roundduration !== 'undefined') {//roundduration - formatted Bay style
+							this.roundduration = data.roundduration;
+						} else if (typeof data.round_duration !== 'undefined') {//round_duration - not formatted /tg/ stile
+							this.roundduration = moment.duration(data.round_duration, "seconds").format("*HH:mm");
 						}
 
-						this.popcap = response.data.popcap;
-						this.mode = response.data.mode;
+						this.popcap = data.popcap;
+						this.mode = data.mode;
 
-						if(typeof response.data.gamestate !== 'undefined') {
-							this.gamestate = response.data.gamestate;
+						if(typeof data.gamestate !== 'undefined') {
+							this.gamestate = data.gamestate;
 						}
 
-						this.cached = response.data.cached;
-						this.error = response.data.error;
+						this.cached = data.cached;
+						this.error = data.error;
 					})
 					.catch(error => {
 						console.log(error);
